@@ -1,0 +1,896 @@
+[
+  {
+    "uri": "http://dbpedia.org/resource/Twister_(1996_film)",
+    "title": "Twister (1996 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Jan_de_Bont"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Anne-Marie_Martin",
+      "http://dbpedia.org/resource/Michael_Crichton"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Cary_Elwes",
+      "http://dbpedia.org/resource/Bill_Paxton",
+      "http://dbpedia.org/resource/Todd_Field",
+      "http://dbpedia.org/resource/Alan_Ruck",
+      "http://dbpedia.org/resource/Helen_Hunt",
+      "http://dbpedia.org/resource/Jami_Gertz",
+      "http://dbpedia.org/resource/Jeremy_Davies",
+      "http://dbpedia.org/resource/Philip_Seymour_Hoffman"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Blues_Brothers_(film)",
+    "title": "The Blues Brothers (film)",
+    "directors": [
+      "http://dbpedia.org/resource/John_Landis"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Dan_Aykroyd",
+      "http://dbpedia.org/resource/John_Landis"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Cab_Calloway",
+      "http://dbpedia.org/resource/Carrie_Fisher",
+      "http://dbpedia.org/resource/Dan_Aykroyd",
+      "http://dbpedia.org/resource/Henry_Gibson",
+      "http://dbpedia.org/resource/James_Brown",
+      "http://dbpedia.org/resource/Aretha_Franklin",
+      "http://dbpedia.org/resource/John_Belushi",
+      "http://dbpedia.org/resource/Ray_Charles"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Fight_Club",
+    "title": "Fight Club",
+    "directors": [
+      "http://dbpedia.org/resource/David_Fincher"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Jim_Uhls"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Brad_Pitt",
+      "http://dbpedia.org/resource/Meat_Loaf",
+      "http://dbpedia.org/resource/Edward_Norton",
+      "http://dbpedia.org/resource/Helena_Bonham_Carter",
+      "http://dbpedia.org/resource/Jared_Leto"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Secondhand_Lions",
+    "title": "Secondhand Lions",
+    "directors": [
+      "http://dbpedia.org/resource/Tim_McCanlies"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Tim_McCanlies"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Robert_Duvall",
+      "http://dbpedia.org/resource/Nicky_Katt",
+      "http://dbpedia.org/resource/Haley_Joel_Osment",
+      "http://dbpedia.org/resource/Kyra_Sedgwick",
+      "http://dbpedia.org/resource/Michael_Caine"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Strictly_Ballroom",
+    "title": "Strictly Ballroom",
+    "directors": [
+      "http://dbpedia.org/resource/Baz_Luhrmann"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Baz_Luhrmann",
+      "http://dbpedia.org/resource/Andrew_Bovell",
+      "http://dbpedia.org/resource/Craig_Pearce"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Pat_Thomson",
+      "http://dbpedia.org/resource/Barry_Otto",
+      "http://dbpedia.org/resource/Bill_Hunter_(actor)",
+      "http://dbpedia.org/resource/Paul_Mercurio",
+      "http://dbpedia.org/resource/Peter_Whitford",
+      "http://dbpedia.org/resource/Gia_Carides",
+      "http://dbpedia.org/resource/Tara_Morice"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Rogue_One",
+    "title": "Rogue One",
+    "directors": [
+      "http://dbpedia.org/resource/Gareth_Edwards_(director)"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Chris_Weitz",
+      "http://dbpedia.org/resource/Gary_Whitta",
+      "http://dbpedia.org/resource/Tony_Gilroy",
+      "http://dbpedia.org/resource/John_Knoll"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Ben_Mendelsohn",
+      "http://dbpedia.org/resource/Mads_Mikkelsen",
+      "http://dbpedia.org/resource/Felicity_Jones",
+      "http://dbpedia.org/resource/Forest_Whitaker",
+      "http://dbpedia.org/resource/Alan_Tudyk",
+      "http://dbpedia.org/resource/Jiang_Wen",
+      "http://dbpedia.org/resource/Diego_Luna",
+      "http://dbpedia.org/resource/Donnie_Yen"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Raiders_of_the_Lost_Ark",
+    "title": "Raiders of the Lost Ark",
+    "directors": [
+      "http://dbpedia.org/resource/Steven_Spielberg"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/George_Lucas",
+      "http://dbpedia.org/resource/Lawrence_Kasdan",
+      "http://dbpedia.org/resource/Philip_Kaufman"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Ronald_Lacey",
+      "http://dbpedia.org/resource/Denholm_Elliott",
+      "http://dbpedia.org/resource/John_Rhys-Davies",
+      "http://dbpedia.org/resource/Paul_Freeman_(actor)",
+      "http://dbpedia.org/resource/Harrison_Ford",
+      "http://dbpedia.org/resource/Karen_Allen"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Raising_Arizona",
+    "title": "Raising Arizona",
+    "directors": [
+      "http://dbpedia.org/resource/Coen_brothers"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/Holly_Hunter",
+      "http://dbpedia.org/resource/Nicolas_Cage"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Rustlers'_Rhapsody",
+    "title": "Rustlers' Rhapsody",
+    "directors": [
+      "http://dbpedia.org/resource/Hugh_Wilson_(director)"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Hugh_Wilson_(director)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/G._W._Bailey",
+      "http://dbpedia.org/resource/Andy_Griffith",
+      "http://dbpedia.org/resource/Tom_Berenger",
+      "http://dbpedia.org/resource/Fernando_Rey",
+      "http://dbpedia.org/resource/Marilu_Henner"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/A_Fish_Called_Wanda",
+    "title": "A Fish Called Wanda",
+    "directors": [
+      "http://dbpedia.org/resource/Charles_Crichton"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Charles_Crichton",
+      "http://dbpedia.org/resource/John_Cleese"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Jamie_Lee_Curtis",
+      "http://dbpedia.org/resource/John_Cleese",
+      "http://dbpedia.org/resource/Kevin_Kline",
+      "http://dbpedia.org/resource/Michael_Palin"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Napoleon_Dynamite",
+    "title": "Napoleon Dynamite",
+    "directors": [
+      "http://dbpedia.org/resource/Jared_and_Jerusha_Hess"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Jared_and_Jerusha_Hess"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Jon_Gries",
+      "http://dbpedia.org/resource/Jon_Heder",
+      "http://dbpedia.org/resource/Efren_Ramirez",
+      "http://dbpedia.org/resource/Tina_Majorino",
+      "http://dbpedia.org/resource/Aaron_Ruell",
+      "http://dbpedia.org/resource/Diedrich_Bader"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Beetlejuice",
+    "title": "Beetlejuice",
+    "directors": [
+      "http://dbpedia.org/resource/Tim_Burton"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Warren_Skaaren",
+      "http://dbpedia.org/resource/Larry_Wilson_(screenwriter)",
+      "http://dbpedia.org/resource/Michael_McDowell_(author)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Geena_Davis",
+      "http://dbpedia.org/resource/Catherine_O'Hara",
+      "http://dbpedia.org/resource/Winona_Ryder",
+      "http://dbpedia.org/resource/Alec_Baldwin",
+      "http://dbpedia.org/resource/Jeffrey_Jones",
+      "http://dbpedia.org/resource/Michael_Keaton"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Drop_Dead_Gorgeous_(film)",
+    "title": "Drop Dead Gorgeous (film)",
+    "directors": [
+      "http://dbpedia.org/resource/Michael_Patrick_Jann"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Lona_Williams"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Denise_Richards",
+      "http://dbpedia.org/resource/Ellen_Barkin",
+      "http://dbpedia.org/resource/Kirsten_Dunst",
+      "http://dbpedia.org/resource/Kirstie_Alley"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Tapeheads",
+    "title": "Tapeheads",
+    "directors": [
+      "http://dbpedia.org/resource/Bill_Fishman_(director)"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Peter_McCarthy_(American_film_producer)",
+      "http://dbpedia.org/resource/Bill_Fishman_(director)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Tim_Robbins",
+      "http://dbpedia.org/resource/John_Cusack"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/This_Is_Spinal_Tap",
+    "title": "This Is Spinal Tap",
+    "directors": [
+      "http://dbpedia.org/resource/Rob_Reiner"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Rob_Reiner",
+      "http://dbpedia.org/resource/Christopher_Guest",
+      "http://dbpedia.org/resource/Harry_Shearer",
+      "http://dbpedia.org/resource/Michael_McKean"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Rob_Reiner",
+      "http://dbpedia.org/resource/Christopher_Guest",
+      "http://dbpedia.org/resource/Bruno_Kirby",
+      "http://dbpedia.org/resource/Tony_Hendra",
+      "http://dbpedia.org/resource/June_Chadwick",
+      "http://dbpedia.org/resource/Harry_Shearer",
+      "http://dbpedia.org/resource/Michael_McKean"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Jerk",
+    "title": "The Jerk",
+    "directors": [
+      "http://dbpedia.org/resource/Carl_Reiner"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Carl_Gottlieb",
+      "http://dbpedia.org/resource/Steve_Martin",
+      "http://dbpedia.org/resource/Michael_Elias"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Bernadette_Peters",
+      "http://dbpedia.org/resource/Steve_Martin",
+      "http://dbpedia.org/resource/Catlin_Adams",
+      "http://dbpedia.org/resource/Jackie_Mason"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Airplane!",
+    "title": "Airplane!",
+    "directors": [
+      "http://dbpedia.org/resource/David_Zucker",
+      "http://dbpedia.org/resource/Jerry_Zucker",
+      "http://dbpedia.org/resource/Jim_Abrahams"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/David_Zucker",
+      "http://dbpedia.org/resource/Jerry_Zucker",
+      "http://dbpedia.org/resource/Jim_Abrahams"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Julie_Hagerty",
+      "http://dbpedia.org/resource/Robert_Hays"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Young_Frankenstein",
+    "title": "Young Frankenstein",
+    "directors": [
+      "http://dbpedia.org/resource/Mel_Brooks"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Mel_Brooks",
+      "http://dbpedia.org/resource/Gene_Wilder"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Peter_Boyle",
+      "http://dbpedia.org/resource/Cloris_Leachman",
+      "http://dbpedia.org/resource/Gene_Wilder",
+      "http://dbpedia.org/resource/Madeline_Kahn",
+      "http://dbpedia.org/resource/Teri_Garr",
+      "http://dbpedia.org/resource/Kenneth_Mars",
+      "http://dbpedia.org/resource/Marty_Feldman"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Rain_Man",
+    "title": "Rain Man",
+    "directors": [
+      "http://dbpedia.org/resource/Barry_Levinson"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Ronald_Bass",
+      "http://dbpedia.org/resource/Barry_Morrow"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Valeria_Golino",
+      "http://dbpedia.org/resource/Tom_Cruise",
+      "http://dbpedia.org/resource/Dustin_Hoffman",
+      "http://dbpedia.org/resource/Jerry_Molen"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Galaxy_Quest",
+    "title": "Galaxy Quest",
+    "directors": [
+      "http://dbpedia.org/resource/Dean_Parisot"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Robert_Gordon_(screenwriter)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Sam_Rockwell",
+      "http://dbpedia.org/resource/Sigourney_Weaver",
+      "http://dbpedia.org/resource/Tim_Allen",
+      "http://dbpedia.org/resource/Tony_Shalhoub",
+      "http://dbpedia.org/resource/Alan_Rickman",
+      "http://dbpedia.org/resource/Daryl_Mitchell_(actor)"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Forrest_Gump",
+    "title": "Forrest Gump",
+    "directors": [
+      "http://dbpedia.org/resource/Robert_Zemeckis"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Winston_Groom",
+      "http://dbpedia.org/resource/Eric_Roth"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Robin_Wright",
+      "http://dbpedia.org/resource/Sally_Field",
+      "http://dbpedia.org/resource/Gary_Sinise",
+      "http://dbpedia.org/resource/Mykelti_Williamson",
+      "http://dbpedia.org/resource/Tom_Hanks"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Usual_Suspects",
+    "title": "The Usual Suspects",
+    "directors": [],
+    "writers": [],
+    "actors": []
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Mr._Holland's_Opus",
+    "title": "Mr. Holland's Opus",
+    "directors": [
+      "http://dbpedia.org/resource/Stephen_Herek"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Patrick_Sheane_Duncan"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Richard_Dreyfuss",
+      "http://dbpedia.org/resource/Glenne_Headly",
+      "http://dbpedia.org/resource/Jay_Thomas",
+      "http://dbpedia.org/resource/Olympia_Dukakis"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Pulp_Fiction",
+    "title": "Pulp Fiction",
+    "directors": [
+      "http://dbpedia.org/resource/Quentin_Tarantino"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Quentin_Tarantino",
+      "http://dbpedia.org/resource/Roger_Avary"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Rosanna_Arquette",
+      "http://dbpedia.org/resource/Samuel_L._Jackson",
+      "http://dbpedia.org/resource/John_Travolta",
+      "http://dbpedia.org/resource/Uma_Thurman",
+      "http://dbpedia.org/resource/Ving_Rhames",
+      "http://dbpedia.org/resource/Christopher_Walken",
+      "http://dbpedia.org/resource/Bruce_Willis",
+      "http://dbpedia.org/resource/Tim_Roth",
+      "http://dbpedia.org/resource/Amanda_Plummer",
+      "http://dbpedia.org/resource/Eric_Stoltz",
+      "http://dbpedia.org/resource/Harvey_Keitel",
+      "http://dbpedia.org/resource/Maria_de_Medeiros"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Seabiscuit_(film)",
+    "title": "Seabiscuit (film)",
+    "directors": [
+      "http://dbpedia.org/resource/Gary_Ross"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Gary_Ross"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Chris_Cooper",
+      "http://dbpedia.org/resource/Elizabeth_Banks",
+      "http://dbpedia.org/resource/Gary_Stevens_(jockey)",
+      "http://dbpedia.org/resource/Tobey_Maguire",
+      "http://dbpedia.org/resource/William_H._Macy",
+      "http://dbpedia.org/resource/Jeff_Bridges"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Blind_Side_(1993_film)",
+    "title": "Blind Side (1993 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Geoff_Murphy"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/Ron_Silver",
+      "http://dbpedia.org/resource/Rutger_Hauer",
+      "http://dbpedia.org/resource/Rebecca_De_Mornay"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Blind_Side_(film)",
+    "title": "The Blind Side (film)",
+    "directors": [
+      "http://dbpedia.org/resource/John_Lee_Hancock"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/John_Lee_Hancock"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Sandra_Bullock",
+      "http://dbpedia.org/resource/Lily_Collins",
+      "http://dbpedia.org/resource/Tim_McGraw",
+      "http://dbpedia.org/resource/Jae_Head",
+      "http://dbpedia.org/resource/Kathy_Bates",
+      "http://dbpedia.org/resource/Kim_Dickens",
+      "http://dbpedia.org/resource/Quinton_Aaron"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Family_Stone",
+    "title": "The Family Stone",
+    "directors": [
+      "http://dbpedia.org/resource/Thomas_Bezucha"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Thomas_Bezucha"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Sarah_Jessica_Parker",
+      "http://dbpedia.org/resource/Brian_J._White",
+      "http://dbpedia.org/resource/Dermot_Mulroney",
+      "http://dbpedia.org/resource/Craig_T._Nelson",
+      "http://dbpedia.org/resource/Claire_Danes",
+      "http://dbpedia.org/resource/Luke_Wilson",
+      "http://dbpedia.org/resource/Diane_Keaton",
+      "http://dbpedia.org/resource/Rachel_McAdams"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Men_in_Black_(1997_film)",
+    "title": "Men in Black (1997 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Barry_Sonnenfeld"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Ed_Solomon"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Rip_Torn",
+      "http://dbpedia.org/resource/Vincent_D'Onofrio",
+      "http://dbpedia.org/resource/Linda_Fiorentino",
+      "http://dbpedia.org/resource/Tommy_Lee_Jones",
+      "http://dbpedia.org/resource/Will_Smith"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Karate_Kid",
+    "title": "The Karate Kid",
+    "directors": [
+      "http://dbpedia.org/resource/John_G._Avildsen"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Robert_Mark_Kamen"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Elisabeth_Shue",
+      "http://dbpedia.org/resource/William_Zabka",
+      "http://dbpedia.org/resource/Pat_Morita",
+      "http://dbpedia.org/resource/Martin_Kove",
+      "http://dbpedia.org/resource/Ralph_Macchio",
+      "http://dbpedia.org/resource/Randee_Heller"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Iron_Man_(2009_film)",
+    "title": "Iron Man (2009 film)",
+    "directors": [
+      "http://dbpedia.org/resource/The_Knot_(2006_film)"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/Wu_Gang_(actor)"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Guardians_of_the_Galaxy_(film)",
+    "title": "Guardians of the Galaxy (film)",
+    "directors": [
+      "http://dbpedia.org/resource/James_Gunn"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Nicole_Perlman",
+      "http://dbpedia.org/resource/James_Gunn"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Benicio_del_Toro",
+      "http://dbpedia.org/resource/Bradley_Cooper",
+      "http://dbpedia.org/resource/Dave_Bautista",
+      "http://dbpedia.org/resource/Vin_Diesel",
+      "http://dbpedia.org/resource/Chris_Pratt",
+      "http://dbpedia.org/resource/Glenn_Close",
+      "http://dbpedia.org/resource/Lee_Pace",
+      "http://dbpedia.org/resource/Zoe_Salda\u00f1a",
+      "http://dbpedia.org/resource/John_C._Reilly",
+      "http://dbpedia.org/resource/Karen_Gillan",
+      "http://dbpedia.org/resource/Djimon_Hounsou",
+      "http://dbpedia.org/resource/Michael_Rooker"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Anchorman:_The_Legend_of_Ron_Burgundy",
+    "title": "Anchorman: The Legend of Ron Burgundy",
+    "directors": [
+      "http://dbpedia.org/resource/Adam_McKay"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/David_Koechner",
+      "http://dbpedia.org/resource/Paul_Rudd",
+      "http://dbpedia.org/resource/Christina_Applegate",
+      "http://dbpedia.org/resource/Fred_Willard",
+      "http://dbpedia.org/resource/Steve_Carell",
+      "http://dbpedia.org/resource/Will_Ferrell"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Wizard_of_Oz_(1939_film)",
+    "title": "The Wizard of Oz (1939 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Victor_Fleming"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Noel_Langley",
+      "http://dbpedia.org/resource/Florence_Ryerson",
+      "http://dbpedia.org/resource/Edgar_Allan_Woolf"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Munchkin",
+      "http://dbpedia.org/resource/Bert_Lahr",
+      "http://dbpedia.org/resource/Billie_Burke",
+      "http://dbpedia.org/resource/Judy_Garland",
+      "http://dbpedia.org/resource/Frank_Morgan",
+      "http://dbpedia.org/resource/Jack_Haley",
+      "http://dbpedia.org/resource/Charley_Grapewin",
+      "http://dbpedia.org/resource/Margaret_Hamilton_(actress)",
+      "http://dbpedia.org/resource/Ray_Bolger"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Bad_Santa",
+    "title": "Bad Santa",
+    "directors": [
+      "http://dbpedia.org/resource/Terry_Zwigoff"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/Bernie_Mac",
+      "http://dbpedia.org/resource/Billy_Bob_Thornton",
+      "http://dbpedia.org/resource/Brett_Kelly_(actor)",
+      "http://dbpedia.org/resource/John_Ritter",
+      "http://dbpedia.org/resource/Tony_Cox_(actor)",
+      "http://dbpedia.org/resource/Lauren_Graham",
+      "http://dbpedia.org/resource/Lauren_Tom"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Beverly_Hills_Cop",
+    "title": "Beverly Hills Cop",
+    "directors": [
+      "http://dbpedia.org/resource/Martin_Brest"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Daniel_Petrie_Jr."
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Ronny_Cox",
+      "http://dbpedia.org/resource/Judge_Reinhold",
+      "http://dbpedia.org/resource/Lisa_Eilbacher",
+      "http://dbpedia.org/resource/Steven_Berkoff",
+      "http://dbpedia.org/resource/Eddie_Murphy",
+      "http://dbpedia.org/resource/John_Ashton_(actor)"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Gods_Must_Be_Crazy",
+    "title": "The Gods Must Be Crazy",
+    "directors": [
+      "http://dbpedia.org/resource/Jamie_Uys"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Jamie_Uys"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Sandra_Prinsloo",
+      "http://dbpedia.org/resource/Ken_Gampu",
+      "http://dbpedia.org/resource/Marius_Weyers",
+      "http://dbpedia.org/resource/N\u01c3xau_\u01c2Toma"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Bridesmaids_(2011_film)",
+    "title": "Bridesmaids (2011 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Paul_Feig"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Annie_Mumolo",
+      "http://dbpedia.org/resource/Kristen_Wiig"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Rose_Byrne",
+      "http://dbpedia.org/resource/Maya_Rudolph",
+      "http://dbpedia.org/resource/Melissa_McCarthy",
+      "http://dbpedia.org/resource/Chris_O'Dowd",
+      "http://dbpedia.org/resource/Ellie_Kemper",
+      "http://dbpedia.org/resource/Wendi_McLendon-Covey",
+      "http://dbpedia.org/resource/Kristen_Wiig"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Horrible_Bosses",
+    "title": "Horrible Bosses",
+    "directors": [
+      "http://dbpedia.org/resource/Seth_Gordon"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Jonathan_Goldstein_(filmmaker)",
+      "http://dbpedia.org/resource/John_Francis_Daley"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Colin_Farrell",
+      "http://dbpedia.org/resource/Jamie_Foxx",
+      "http://dbpedia.org/resource/Jason_Bateman",
+      "http://dbpedia.org/resource/Jason_Sudeikis",
+      "http://dbpedia.org/resource/Jennifer_Aniston",
+      "http://dbpedia.org/resource/Charlie_Day",
+      "http://dbpedia.org/resource/Kevin_Spacey",
+      "http://dbpedia.org/resource/Donald_Sutherland"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Murder_by_Death",
+    "title": "Murder by Death",
+    "directors": [
+      "http://dbpedia.org/resource/Robert_Moore_(director)"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Neil_Simon"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/David_Niven",
+      "http://dbpedia.org/resource/Peter_Falk",
+      "http://dbpedia.org/resource/Peter_Sellers",
+      "http://dbpedia.org/resource/Eileen_Brennan",
+      "http://dbpedia.org/resource/Elsa_Lanchester",
+      "http://dbpedia.org/resource/Nancy_Walker",
+      "http://dbpedia.org/resource/Maggie_Smith",
+      "http://dbpedia.org/resource/Truman_Capote",
+      "http://dbpedia.org/resource/Alec_Guinness",
+      "http://dbpedia.org/resource/Estelle_Winwood",
+      "http://dbpedia.org/resource/James_Coco"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Caddyshack",
+    "title": "Caddyshack",
+    "directors": [
+      "http://dbpedia.org/resource/Harold_Ramis"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Brian_Doyle-Murray",
+      "http://dbpedia.org/resource/Harold_Ramis",
+      "http://dbpedia.org/resource/Douglas_Kenney"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Rodney_Dangerfield",
+      "http://dbpedia.org/resource/Bill_Murray",
+      "http://dbpedia.org/resource/Ted_Knight",
+      "http://dbpedia.org/resource/Chevy_Chase",
+      "http://dbpedia.org/resource/Michael_O'Keefe"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Jurassic_Park",
+    "title": "Jurassic Park",
+    "directors": [],
+    "writers": [],
+    "actors": []
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Breakfast_Club",
+    "title": "The Breakfast Club",
+    "directors": [
+      "http://dbpedia.org/resource/John_Hughes_(filmmaker)"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/John_Hughes_(filmmaker)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Judd_Nelson",
+      "http://dbpedia.org/resource/Paul_Gleason",
+      "http://dbpedia.org/resource/Emilio_Estevez",
+      "http://dbpedia.org/resource/Molly_Ringwald",
+      "http://dbpedia.org/resource/Anthony_Michael_Hall",
+      "http://dbpedia.org/resource/Ally_Sheedy"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Up_(2009_film)",
+    "title": "Up (2009 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Pete_Docter"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Bob_Peterson_(filmmaker)",
+      "http://dbpedia.org/resource/Pete_Docter",
+      "http://dbpedia.org/resource/Tom_McCarthy_(director)"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Bob_Peterson_(filmmaker)",
+      "http://dbpedia.org/resource/Jordan_Nagai",
+      "http://dbpedia.org/resource/Christopher_Plummer",
+      "http://dbpedia.org/resource/Ed_Asner"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/The_Jungle_Book_(1967_film)",
+    "title": "The Jungle Book (1967 film)",
+    "directors": [
+      "http://dbpedia.org/resource/Wolfgang_Reitherman"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Vance_Gerry",
+      "http://dbpedia.org/resource/Ken_Anderson_(animator)",
+      "http://dbpedia.org/resource/Larry_Clemmons",
+      "http://dbpedia.org/resource/Ralph_Wright"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/George_Sanders",
+      "http://dbpedia.org/resource/Louis_Prima",
+      "http://dbpedia.org/resource/Sterling_Holloway",
+      "http://dbpedia.org/resource/Bruce_Reitherman",
+      "http://dbpedia.org/resource/John_Abbott_(actor)",
+      "http://dbpedia.org/resource/Phil_Harris",
+      "http://dbpedia.org/resource/Sebastian_Cabot_(actor)"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Aladdin_(1992_Disney_film)",
+    "title": "Aladdin (1992 Disney film)",
+    "directors": [
+      "http://dbpedia.org/resource/Ron_Clements",
+      "http://dbpedia.org/resource/John_Musker"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Roger_Allers",
+      "http://dbpedia.org/resource/Ron_Clements",
+      "http://dbpedia.org/resource/John_Musker",
+      "http://dbpedia.org/resource/Chris_Sanders",
+      "http://dbpedia.org/resource/Sue_Nichols",
+      "http://dbpedia.org/resource/Francis_Glebas",
+      "http://dbpedia.org/resource/Burny_Mattinson",
+      "http://dbpedia.org/resource/Darrell_Rooney",
+      "http://dbpedia.org/resource/Daan_Jippes",
+      "http://dbpedia.org/resource/Brian_Pimental",
+      "http://dbpedia.org/resource/Ted_Elliott_(screenwriter)",
+      "http://dbpedia.org/resource/Terry_Rossio",
+      "http://dbpedia.org/resource/Kevin_Lima"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Robin_Williams",
+      "http://dbpedia.org/resource/Scott_Weinger",
+      "http://dbpedia.org/resource/Jonathan_Freeman_(actor)",
+      "http://dbpedia.org/resource/Frank_Welker",
+      "http://dbpedia.org/resource/Gilbert_Gottfried",
+      "http://dbpedia.org/resource/Linda_Larkin",
+      "http://dbpedia.org/resource/Douglas_Seale"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Thor:_Ragnarok",
+    "title": "Thor: Ragnarok",
+    "directors": [
+      "http://dbpedia.org/resource/Taika_Waititi"
+    ],
+    "writers": [
+      "http://dbpedia.org/resource/Craig_Kyle",
+      "http://dbpedia.org/resource/Eric_Pearson",
+      "http://dbpedia.org/resource/Christopher_L._Yost"
+    ],
+    "actors": [
+      "http://dbpedia.org/resource/Cate_Blanchett",
+      "http://dbpedia.org/resource/Chris_Hemsworth",
+      "http://dbpedia.org/resource/Anthony_Hopkins",
+      "http://dbpedia.org/resource/Tom_Hiddleston",
+      "http://dbpedia.org/resource/Jeff_Goldblum",
+      "http://dbpedia.org/resource/Tessa_Thompson",
+      "http://dbpedia.org/resource/Karl_Urban",
+      "http://dbpedia.org/resource/Mark_Ruffalo",
+      "http://dbpedia.org/resource/Idris_Elba"
+    ]
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Harold_and_Maude",
+    "title": "Harold and Maude",
+    "directors": [],
+    "writers": [],
+    "actors": []
+  },
+  {
+    "uri": "http://dbpedia.org/resource/Team_America:_World_Police",
+    "title": "Team America: World Police",
+    "directors": [
+      "http://dbpedia.org/resource/Trey_Parker"
+    ],
+    "writers": [],
+    "actors": [
+      "http://dbpedia.org/resource/Masasa_Moyo",
+      "http://dbpedia.org/resource/Matt_Stone",
+      "http://dbpedia.org/resource/Maurice_LaMarche",
+      "http://dbpedia.org/resource/Trey_Parker",
+      "http://dbpedia.org/resource/Daran_Norris",
+      "http://dbpedia.org/resource/Jeremy_Shada",
+      "http://dbpedia.org/resource/Phil_Hendrie",
+      "http://dbpedia.org/resource/Fred_Tatasciore",
+      "http://dbpedia.org/resource/Kristen_Miller"
+    ]
+  }
+]
