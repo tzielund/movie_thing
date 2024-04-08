@@ -45,6 +45,7 @@ class MovieListComplete:
         self.movies = dict()
         self.not_movies = dict()
         self.cast_covered = dict()
+        self.ratings = dict()
         self.cache_file = f"{MOVIE_LIST_CACHE_DIR}complete_{list_title}.json"
         if os.path.exists(self.cache_file):
             with open(self.cache_file) as IN:
@@ -56,6 +57,8 @@ class MovieListComplete:
                     for movie in package["not_movies"]:
                         self.ignore_movie(movie)
                 self.cast_covered = package["cast_covered"]
+                if "ratings" in package:
+                    self.ratings = package["ratings"]
 
     def write(self):
         with open (self.cache_file, 'w') as OUT:
@@ -63,6 +66,7 @@ class MovieListComplete:
             package["movies"] = list(self.movies.keys())
             package["cast_covered"] = self.cast_covered
             package["not_movies"] = list(self.not_movies.keys())
+            package["ratings"] = self.ratings
             OUT.write(json.dumps(package, indent=2))
 
     def add_movie(self, movie_id, movie_title = None):
@@ -70,6 +74,10 @@ class MovieListComplete:
         if not movie_title:
             movie_title = movie_id.split("/")[-1]
         self.movies[movie_id] = movie_title
+
+    def rate_movie(self, movie_id, rating: int):
+        if movie_id in self.movies:
+            self.ratings[movie_id] = rating
 
     def ignore_movie(self, movie_id, movie_title = None):
         self.remove_movie(movie_id)
@@ -84,6 +92,8 @@ class MovieListComplete:
     def remove_movie(self, movie_id):
         if movie_id in self.movies:
             del self.movies[movie_id]
+        if movie_id in self.ratings:
+            del self.ratings[movie_id]
 
     def has(self, movie_id):
         return movie_id in self.movies
@@ -99,6 +109,12 @@ class MovieListComplete:
 
     def is_cast_member_acknowledged(self, cast_member_uri):
         return cast_member_uri in self.cast_covered
+
+    def get_movie_rating(self, movie_id):
+        return self.ratings.get(movie_id, -1)
+
+    def get_unrated_movies(self):
+        return [movie for movie in self.movies if movie not in self.ratings]
 
 class MovieList:
     def __init__(self, list_title: str):

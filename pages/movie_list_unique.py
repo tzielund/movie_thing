@@ -3,8 +3,6 @@
 import streamlit
 
 import dbpedia_movie_util
-import omdb_util
-import tmdb_util
 from unique_movie_list import MovieList
 
 my_unique_movie_list = MovieList("tom_zielund_unique_movies")

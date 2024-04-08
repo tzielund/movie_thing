@@ -12,7 +12,9 @@ show_acknowledged = streamlit.sidebar.checkbox("Show acknowledged cast members")
 default_cast_member = ""
 default_cast_member_uri = ""
 non_acknowledged_count = 0
-for movie in my_complete_movie_list.get_movies():
+reverse_movie_list = list(my_complete_movie_list.get_movies().keys())
+reverse_movie_list.reverse()
+for movie in reverse_movie_list:
     movie_title = movie.split("/")[-1]
     acknowledged = ""
     if show_acknowledged:

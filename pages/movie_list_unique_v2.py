@@ -3,13 +3,12 @@
 import streamlit
 
 import dbpedia_movie_util
-import omdb_util
-import tmdb_util
-from unique_movie_list import MovieList
+from unique_movie_list import MovieList, MovieListComplete, Movie
 
 my_unique_movie_list = MovieList("tom_zielund_unique_movies")
+my_complete_movie_list = MovieListComplete("tom_zielund_complete_movies")
 
-streamlit.sidebar.header("My Movie List")
+streamlit.sidebar.header(f"My Movie List {len(my_unique_movie_list.get_movies())}")
 for movie in my_unique_movie_list.get_movies():
     streamlit.sidebar.markdown(f"[{movie.title}]({movie.uri})")
 
@@ -60,68 +59,54 @@ if selected_cast:
 
 streamlit.title("Search for a movie to add to your list")
 
-streamlit.header("Search for a movie to add to your list")
+how_to_search = streamlit.selectbox("How to search", ["Pick from list", "Search by title"])
 
-search_term = streamlit.text_input("Enter a movie title")
-if search_term:
-    dbpedia_search = dbpedia_movie_util.search_for_movies_by_title(search_term)
-    # streamlit.json(dbpedia_search)
-    if dbpedia_search:
-        for (movie_uri,movie_title) in dbpedia_search:
-            # Show a radio button for each result
-            fetch_details = streamlit.checkbox(f"{movie_title} ({movie_uri})")
-            if not fetch_details:
-                continue
-            streamlit.write("DBPedia details:")
-            dbpedia_details = dbpedia_movie_util.get_movie_data(movie_uri, movie_title)
-            # Write out the details nicely
-            streamlit.write("Directors:")
-            for director in dbpedia_details["directors"]:
-                d_link = dbpedia_movie_util.dbpedia_markdown_link(director)
-                streamlit.markdown(f"* {d_link}")
-            streamlit.write("Writers:")
-            for writer in dbpedia_details["writers"]:
-                w_link = dbpedia_movie_util.dbpedia_markdown_link(writer)
-                streamlit.markdown(f"* {w_link}")
-            streamlit.write("Actors:")
-            for actor in dbpedia_details["actors"]:
-                a_link = dbpedia_movie_util.dbpedia_markdown_link(actor)
-                streamlit.markdown(f"* {a_link}")
+if how_to_search == "Search by title":
+    streamlit.header("Search for a movie to add to your list")
 
-            # Check if it's already in the unique movie list:
-            if my_unique_movie_list.has_movie_by_uri(movie_uri):
-                streamlit.write("Movie already in your list")
-                continue
-
-            # Check if it could be added to the unique movie list
-            reasons_for_failure = my_unique_movie_list.cannot_add_complete(dbpedia_details)
-            if reasons_for_failure:
-                streamlit.write("Cannot add to your list")
-                for reason in reasons_for_failure:
-                    credit_type = reason[0]
-                    credited_person_link = dbpedia_movie_util.dbpedia_markdown_link(reason[1])
-                    credited_movie_link = dbpedia_movie_util.dbpedia_markdown_link(reason[2])
-                    streamlit.write(f"{credit_type} {credited_person_link} already used in {credited_movie_link}")
-                add_anyway = streamlit.button("Add anyway and replace these?")
-                if add_anyway:
-                    my_unique_movie_list.add_movie_from_dict(dbpedia_details, replace_if_needed=True)
-                    my_unique_movie_list.write()
-                    streamlit.write("Added to your list")
-                    acknowledge = streamlit.button("OK")
-                    if acknowledge:
-                        streamlit.experimental_rerun()
-                    else:
-                        streamlit.stop()
-                else:
+    search_term = streamlit.text_input("Enter a movie title")
+    if search_term:
+        dbpedia_search = dbpedia_movie_util.search_for_movies_by_title(search_term)
+        # streamlit.json(dbpedia_search)
+        if dbpedia_search:
+            for (movie_uri,movie_title) in dbpedia_search:
+                # Show a radio button for each result
+                fetch_details = streamlit.checkbox(f"{movie_title} ({movie_uri})")
+                if not fetch_details:
                     continue
-            else: # no reasons for failure
-                add_to_my_list = streamlit.checkbox("Add to my list")
-                if add_to_my_list:
-                    result = my_unique_movie_list.add_movie_from_dict(dbpedia_details)
-                    if not result:
-                        streamlit.write("Failed to add to your list")
-                        streamlit.stop()
-                    else:
+                streamlit.write("DBPedia details:")
+                dbpedia_details = dbpedia_movie_util.get_movie_data(movie_uri, movie_title)
+                # Write out the details nicely
+                streamlit.write("Directors:")
+                for director in dbpedia_details["directors"]:
+                    d_link = dbpedia_movie_util.dbpedia_markdown_link(director)
+                    streamlit.markdown(f"* {d_link}")
+                streamlit.write("Writers:")
+                for writer in dbpedia_details["writers"]:
+                    w_link = dbpedia_movie_util.dbpedia_markdown_link(writer)
+                    streamlit.markdown(f"* {w_link}")
+                streamlit.write("Actors:")
+                for actor in dbpedia_details["actors"]:
+                    a_link = dbpedia_movie_util.dbpedia_markdown_link(actor)
+                    streamlit.markdown(f"* {a_link}")
+
+                # Check if it's already in the unique movie list:
+                if my_unique_movie_list.has_movie_by_uri(movie_uri):
+                    streamlit.write("Movie already in your list")
+                    continue
+
+                # Check if it could be added to the unique movie list
+                reasons_for_failure = my_unique_movie_list.cannot_add_complete(dbpedia_details)
+                if reasons_for_failure:
+                    streamlit.write("Cannot add to your list")
+                    for reason in reasons_for_failure:
+                        credit_type = reason[0]
+                        credited_person_link = dbpedia_movie_util.dbpedia_markdown_link(reason[1])
+                        credited_movie_link = dbpedia_movie_util.dbpedia_markdown_link(reason[2])
+                        streamlit.write(f"{credit_type} {credited_person_link} already used in {credited_movie_link}")
+                    add_anyway = streamlit.button("Add anyway and replace these?")
+                    if add_anyway:
+                        my_unique_movie_list.add_movie_from_dict(dbpedia_details, replace_if_needed=True)
                         my_unique_movie_list.write()
                         streamlit.write("Added to your list")
                         acknowledge = streamlit.button("OK")
@@ -129,15 +114,76 @@ if search_term:
                             streamlit.experimental_rerun()
                         else:
                             streamlit.stop()
+                    else:
+                        continue
+                else: # no reasons for failure
+                    add_to_my_list = streamlit.checkbox("Add to my list")
+                    if add_to_my_list:
+                        result = my_unique_movie_list.add_movie_from_dict(dbpedia_details)
+                        if not result:
+                            streamlit.write("Failed to add to your list")
+                            streamlit.stop()
+                        else:
+                            my_unique_movie_list.write()
+                            streamlit.write("Added to your list")
+                            acknowledge = streamlit.button("OK")
+                            if acknowledge:
+                                streamlit.experimental_rerun()
+                            else:
+                                streamlit.stop()
 
+else:
+    streamlit.header("Pick a movie from your complete list")
+    complete_movie_set = set(my_complete_movie_list.movies.keys())
+    unique_movie_set = set(my_unique_movie_list.movies.keys())
+    complete_movie_minus_unique = complete_movie_set - unique_movie_set
+    # sort the list by rating, descending
+    complete_movie_minus_unique = sorted(complete_movie_minus_unique,
+                                         key=lambda x: my_complete_movie_list.ratings.get(x, 0), reverse=True)
+    streamlit.write(f"Movies in your complete list that are not in your unique list: {len(complete_movie_minus_unique)}")
+    show_impossible = streamlit.checkbox("Show movies that cannot be added")
+    search_term = streamlit.text_input("Enter a movie title")
+    for movie_uri in complete_movie_minus_unique:
+        if search_term and search_term.lower() not in movie_uri.lower():
+            continue
+        movie = dbpedia_movie_util.get_movie_data(movie_uri, movie_uri)
+        movie_link = dbpedia_movie_util.dbpedia_markdown_link(movie_uri)
+        reason_cannot_add = my_unique_movie_list.cannot_add_complete(movie)
+        if reason_cannot_add:
+            if not show_impossible:
+                continue
+            add_it_anyway = streamlit.checkbox(f"{movie_link} (cannot add)")
+            for (reason, person, film) in reason_cannot_add:
+                person_name = person.split("/")[-1]
+                film_name = film.split("/")[-1]
+                streamlit.write(f"--* {reason} {person_name} already used in {film_name}")
+            # streamlit.write(f"* {movie_link} ({reason_cannot_add})")
+            if add_it_anyway:
+                do_it = streamlit.button("Add anyway")
+                if do_it:
+                    my_unique_movie_list.add_movie_from_dict(movie, replace_if_needed=True)
+                    my_unique_movie_list.write()
+                    streamlit.experimental_rerun()
+                else:
+                    streamlit.stop()
+        else:
+            add_it = streamlit.checkbox(f"* {movie_link} (available)")
+            if add_it:
+                do_it = streamlit.button("Add to my list")
+                if do_it:
+                    my_unique_movie_list.add_movie_from_dict(movie)
+                    my_unique_movie_list.write()
+                    streamlit.experimental_rerun()
+                else:
+                    streamlit.stop()
+    streamlit.write("No more movies to add")
 
-
-streamlit.header("Search for an actor")
-actor_search_term = streamlit.text_input("Enter an actor's dbpedia uri")
-if not actor_search_term:
-    streamlit.stop()
-actor_search_results = dbpedia_movie_util.find_actor_by_uri(actor_search_term)
-for movie_uri in actor_search_results["movies"]:
-    movie_link = dbpedia_movie_util.dbpedia_markdown_link(movie_uri)
-    streamlit.write(f"* {movie_link}")
-streamlit.json(actor_search_results)
+# streamlit.header("Search for an actor")
+# actor_search_term = streamlit.text_input("Enter an actor's dbpedia uri")
+# if not actor_search_term:
+#     streamlit.stop()
+# actor_search_results = dbpedia_movie_util.find_actor_by_uri(actor_search_term)
+# for movie_uri in actor_search_results["movies"]:
+#     movie_link = dbpedia_movie_util.dbpedia_markdown_link(movie_uri)
+#     streamlit.write(f"* {movie_link}")
+# streamlit.json(actor_search_results)
