@@ -45,7 +45,12 @@ def get_movie_data(movie_uri, movie_title, ignore_cache=False):
     if not ignore_cache and os.path.exists(cache_file):
         # streamlit.write("Fetching movie data from cache")
         with open(cache_file) as IN:
-            return json.load(IN)
+            structure = json.load(IN)
+            # Check that structure contains all of the required keys: directors, actors, writers, release_date and gross_revenue
+            if "directors" in structure and "actors" in structure and "writers" in structure:
+                if "release_date" in structure and "gross_revenue" in structure:
+                    return structure
+            # Otherwise continue to fetch the data from dbpedia
     # streamlit.write("Fetching movie data from dbpedia")
     movie_struct = dict()
     movie_struct["uri"] = movie_uri
@@ -112,6 +117,32 @@ def get_movie_data(movie_uri, movie_title, ignore_cache=False):
         actors.append(actor["actor"]["value"])
     movie_struct["actors"] = actors
 
+    # Next gets the release date and gross revenue
+    query = f"""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    select ?release_date ?gross
+    where {{
+        <{movie_uri}> dbp:released ?release_date .
+        <{movie_uri}> dbp:gross ?gross .
+    }}
+    """
+    response = requests.get(url, params={"format": "json", "query": query})
+    if response.status_code != 200:
+        return None
+    revenue_data = response.json()
+    # streamlit.write("Revenue query results")
+    # streamlit.json(json.dumps(revenue_data, indent=2))
+    # Safely attempt to set release_date and gross_revenue
+    bindings = revenue_data["results"]["bindings"]
+    if len(bindings) == 0:
+        movie_struct["release_date"] = "Unknown"
+        movie_struct["gross_revenue"] = "Unknown"
+    else:
+        movie_struct["release_date"] = bindings[0]["release_date"]["value"]
+        movie_struct["gross_revenue"] = bindings[0]["gross"]["value"]
+
     # Check for an override file in cache
     override_file = f"{dbpedia_cache}/overrides/{filename_safe_movie_uri}.json"
     if os.path.exists(override_file):
@@ -123,6 +154,32 @@ def get_movie_data(movie_uri, movie_title, ignore_cache=False):
     with open(cache_file, "w") as OUT:
         OUT.write(json.dumps(movie_struct, indent=2))
     return movie_struct
+
+def update_movie_data(movie_uri, new_data):
+    """Replace movie data in the cache with new data."""
+    filename_safe_movie_id = movie_uri.replace("http://dbpedia.org/resource/", "")
+    filename_safe_movie_uri = filename_safe_movie_id.replace("/", "_")
+    cache_file = f"{dbpedia_cache}/{filename_safe_movie_uri}.json"
+    with open(cache_file, "w") as OUT:
+        OUT.write(json.dumps(new_data, indent=2))
+
+def get_person_thumbnail(person_uri):
+    """Get the thumbnail image for a person."""
+    query = f"""
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    SELECT ?thumbnail
+    WHERE {{
+        <{person_uri}> dbo:thumbnail ?thumbnail .
+    }}
+    """
+    url = "http://dbpedia.org/sparql"
+    response = requests.get(url, params={"format": "json", "query": query})
+    if response.status_code != 200:
+        return None
+    thumbnail_data = response.json()
+    if len(thumbnail_data["results"]["bindings"]) == 0:
+        return None
+    return thumbnail_data["results"]["bindings"][0]["thumbnail"]["value"]
 
 def find_actor_by_uri(dbpedia_uri):
     """Find an actor by their dbpedia uri."""
@@ -248,7 +305,7 @@ def dbpedia_markdown_link(uri, label = None):
     return f"[{label}]({uri})"
 
 
-def find_movies_by_cast(selected_cast, selected_cast_role):
+def find_movies_by_cast(selected_cast, selected_cast_role, ignore_cache=False):
     """Find movies by cast member."""
     if selected_cast_role == "director":
         return find_director_by_uri(selected_cast)
@@ -259,13 +316,14 @@ def find_movies_by_cast(selected_cast, selected_cast_role):
     elif selected_cast_role == "all":
         cast_name = selected_cast.split("/")[-1]
         cache_filename = f"{dbpedia_cache}/_CAST_{cast_name}.json"
-        if os.path.exists(cache_filename):
+        if not ignore_cache and os.path.exists(cache_filename):
             with open(cache_filename) as IN:
                 return json.load(IN)
         wrapper = dict()
         wrapper["actor"] = find_actor_by_uri(selected_cast)
         wrapper["director"] = find_director_by_uri(selected_cast)
         wrapper["writer"] = find_writer_by_uri(selected_cast)
+        wrapper["thumbnail"] = get_person_thumbnail(selected_cast)
         with open(cache_filename, "w") as OUT:
             OUT.write(json.dumps(wrapper, indent=2))
         return wrapper

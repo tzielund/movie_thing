@@ -87,6 +87,12 @@ if search_term:
     chosen_dbpedia_uri = chosen_dbpedia_uri.replace(" ", "_")
     streamlit.write(chosen_dbpedia_uri)
     filmography_search_results = dbpedia_movie_util.find_movies_by_cast(chosen_dbpedia_uri, 'all')
+    thumbnail = filmography_search_results.get("thumbnail")
+    if "thumbnail" not in filmography_search_results:
+        filmography_search_results = dbpedia_movie_util.find_movies_by_cast(chosen_dbpedia_uri, 'all', ignore_cache=True)
+    thumbnail = filmography_search_results.get("thumbnail")
+    if thumbnail:
+        streamlit.image(thumbnail)
     filmography_film_set = set()
     filmography_film_set.update(filmography_search_results["actor"]["movies"])
     filmography_film_set.update(filmography_search_results["director"]["movies"])

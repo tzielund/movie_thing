@@ -9,7 +9,9 @@ my_unique_movie_list = MovieList("tom_zielund_unique_movies")
 my_complete_movie_list = MovieListComplete("tom_zielund_complete_movies")
 
 streamlit.sidebar.header(f"My Movie List {len(my_unique_movie_list.get_movies())}")
-for movie in my_unique_movie_list.get_movies():
+sorted_movies = list(my_unique_movie_list.get_movies())
+sorted_movies.sort(key=lambda x: x.title)
+for movie in sorted_movies:
     streamlit.sidebar.markdown(f"[{movie.title}]({movie.uri})")
 
 selected_cast = None
@@ -169,10 +171,30 @@ else:
         else:
             add_it = streamlit.checkbox(f"* {movie_link} (available)")
             if add_it:
+                movie_data = dbpedia_movie_util.get_movie_data(movie_uri, movie_uri)
+                for director in movie_data["directors"]:
+                    d_link = dbpedia_movie_util.dbpedia_markdown_link(director)
+                    streamlit.markdown(f"* {d_link} (director)")
+                for writer in movie_data["writers"]:
+                    w_link = dbpedia_movie_util.dbpedia_markdown_link(writer)
+                    streamlit.markdown(f"* {w_link} (writer)")
+                for actor in movie_data["actors"]:
+                    a_link = dbpedia_movie_util.dbpedia_markdown_link(actor)
+                    streamlit.markdown(f"* {a_link} (actor)")
                 do_it = streamlit.button("Add to my list")
+                remove_it = streamlit.button("Remove from my list")
+                not_a_movie = streamlit.button("Not a movie")
                 if do_it:
                     my_unique_movie_list.add_movie_from_dict(movie)
                     my_unique_movie_list.write()
+                    streamlit.experimental_rerun()
+                elif remove_it:
+                    my_complete_movie_list.remove_movie(movie_uri)
+                    my_complete_movie_list.write()
+                    streamlit.experimental_rerun()
+                elif not_a_movie:
+                    my_complete_movie_list.ratings[movie_uri] = -1
+                    my_complete_movie_list.write()
                     streamlit.experimental_rerun()
                 else:
                     streamlit.stop()

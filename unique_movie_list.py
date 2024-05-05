@@ -63,6 +63,7 @@ class MovieListComplete:
     def write(self):
         with open (self.cache_file, 'w') as OUT:
             package = dict()
+            # deduplicate the movies
             package["movies"] = list(self.movies.keys())
             package["cast_covered"] = self.cast_covered
             package["not_movies"] = list(self.not_movies.keys())
@@ -241,3 +242,6 @@ class MovieList:
 
     def has_movie_by_uri(self, movie_uri):
         return movie_uri in self.movies
+
+    def get_movie_uri_list(self):
+        return list(self.movies.keys())

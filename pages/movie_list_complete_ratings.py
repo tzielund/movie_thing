@@ -26,6 +26,14 @@ if unrated_movies:
     rate_2 = streamlit.button("2 - It was okay")
     rate_1 = streamlit.button("1 - Not my favorite")
     rate_not = streamlit.button("Not a movie")
+    remove_it = streamlit.checkbox("Remove from list", key=f"remove_it {movie}")
+    if remove_it:
+        confirm = streamlit.button("Are you sure?")
+        if confirm:
+            my_complete_movie_list.remove_movie(movie)
+            my_complete_movie_list.write()
+            streamlit.experimental_rerun()
+
     if rate_5:
         rating = 5
     elif rate_4:
@@ -49,9 +57,12 @@ else:
     streamlit.header("All movies rated!")
     streamlit.write("Change ratings by selecting a movie from the sidebar.")
 
+    sorted_movies = list(my_complete_movie_list.get_movies().keys())
+    sorted_movies.sort()
+
     selected_movie = streamlit.sidebar.radio("Select a movie to change rating",
-                                             list(my_complete_movie_list.get_movies().keys()),
-                                                format_func=lambda movie: movie.split("/")[-1])
+                                             sorted_movies,
+                                             format_func=lambda movie: movie.split("/")[-1])
 
     if selected_movie:
         selected_movie_title = selected_movie.split("/")[-1]
@@ -65,6 +76,13 @@ else:
         rate_2 = streamlit.button("2 - It was okay")
         rate_1 = streamlit.button("1 - Not my favorite")
         rate_not = streamlit.button("Not a movie")
+        remove_it = streamlit.checkbox("Remove from list", key=f"remove_it {selected_movie}")
+        if remove_it:
+            confirm = streamlit.button("Are you sure?")
+            if confirm:
+                my_complete_movie_list.remove_movie(selected_movie)
+                my_complete_movie_list.write()
+                streamlit.experimental_rerun()
         if rate_5:
             rating = 5
         elif rate_4:
